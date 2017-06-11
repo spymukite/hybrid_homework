@@ -1,0 +1,58 @@
+function loadStudentList(index)
+{
+	var append_string = '';
+	append_string += '<li data-filtertext="NASDAQ:Ram " class="mdl-shadow--2dp">';
+	append_string += '<a href="#Studentchart" class="st_name"><img class="minilogo2 mdl-shadow--2dp" alt="" src="images/boy_img.png"><p>Ram Kumar </p>';
+	append_string += '</a>';
+	append_string += '<span class="call_sc2"><a href="tel:"><i class="fa fa-phone-square stud_call"></i></a></span>';
+	append_string += '</li>';
+	append_string += '<li data-filtertext="NASDAQ:babu" class="mdl-shadow--2dp">';
+	append_string += '<a href="#Studentchart"><img class="minilogo2 mdl-shadow--2dp" alt="" src="images/boy_img2.png"><p>Babu</p>';
+	append_string += '</a>';
+	append_string += '<span class="call_sc2"><a href="tel:"><i class="fa fa-phone-square stud_call"></i></a></span>';
+	append_string += '</li>';
+	append_string += '<li data-filtertext="NASDAQ:Chitra" class="mdl-shadow--2dp">';
+	append_string += '<a href="#Studentchart"><img class="minilogo2 mdl-shadow--2dp" alt="" src="images/girl_img.png"><p>Chitra</p>';
+	append_string += '</a>';
+	append_string += '<span class="call_sc2"><a href="tel:"><i class="fa fa-phone-square stud_call"></i></a></span>';
+	append_string += '</li>';
+	append_string += '<li data-filtertext="NASDAQ:Dhivya" class="mdl-shadow--2dp">';
+	append_string += '<a href="#Studentchart"><img class="minilogo2 mdl-shadow--2dp" alt="" src="images/girl_img2.png"><p>Dhivya</p>';
+	append_string += '</a>';
+	append_string += '<span class="call_sc2"><a href="tel:"><i class="fa fa-phone-square stud_call"></i></a></span>';
+	append_string += '</li>';
+	append_string += '<li data-filtertext="NASDAQ:Jemi" class="mdl-shadow--2dp">';
+	append_string += '<a href="#Studentchart"><img class="minilogo2 mdl-shadow--2dp" alt="" src="images/girl_img.png"><p>Jemi</p>';
+	append_string += '</a>';
+	append_string += '<span class="call_sc2"><a href="tel:"><i class="fa fa-phone-square stud_call"></i></a></span>';
+	append_string += '</li>';
+	append_string += '<li data-filtertext="NASDAQ:Krish" class="mdl-shadow--2dp">';
+	append_string += '<a href="#Studentchart"><img class="minilogo2 mdl-shadow--2dp" alt="" src="images/boy_img.png"><p>Krish</p>';
+	append_string += '</a>';
+	append_string += '<span class="call_sc2"><a href="tel:"><i class="fa fa-phone-square stud_call"></i></a></span>';
+	append_string += '</li>';
+	append_string += '<li data-filtertext="NASDAQ:Mani" class="mdl-shadow--2dp">';
+	append_string += '<a href="#Studentchart"><img class="minilogo2 mdl-shadow--2dp" alt="" src="images/boy_img2.png"><p>Mani</p>';
+	append_string += '</a>';
+	append_string += '<span class="call_sc2"><a href="tel:"><i class="fa fa-phone-square stud_call"></i></a></span>';
+	append_string += '</li>';
+	append_string += '<li data-filtertext="NASDAQ:Muhil" class="mdl-shadow--2dp">';
+	append_string += '<a href="#Studentchart"><img class="minilogo2 mdl-shadow--2dp" alt="" src="images/boy_img.png"><p>Muhil</p>';
+	append_string += '</a>';
+	append_string += '<span class="call_sc2"><a href="tel:"><i class="fa fa-phone-square stud_call"></i></a></span>';
+	append_string += '</li>';
+	append_string += '<li data-filtertext="NASDAQ:Nandhini" class="mdl-shadow--2dp">';
+	append_string += '<a href="#Studentchart"><img class="minilogo2 mdl-shadow--2dp" alt="" src="images/girl_img2.png"><p>Nandhini</p></a>';
+	append_string += '<span class="call_sc2"><a href="tel:"><i class="fa fa-phone-square stud_call"></i></a></span>';
+	append_string += '</li>';
+	append_string += '<li data-filtertext="NASDAQ:Pavithra" class="mdl-shadow--2dp">';
+	append_string += '<a href="#Studentchart"><img class="minilogo2 mdl-shadow--2dp" alt="" src="images/girl_img.png"><p>Pavithra</p></a>';
+	append_string += '<span class="call_sc2"><a href="tel:"><i class="fa fa-phone-square stud_call"></i></a></span>';
+	append_string += '</li>';
+	append_string += '<li data-filtertext="NASDAQ:Prakash" class="mdl-shadow--2dp">';
+	append_string += '<a href="#Studentchart"><img class="minilogo2 mdl-shadow--2dp" alt="" src="images/boy_img2.png"><p>Prakash</p>    </a>';
+	append_string += '<span class="call_sc2"><a href="tel:"><i class="fa fa-phone-square stud_call"></i></a></span>';
+	append_string += '</li>';
+
+	$(index).append(append_string);
+}

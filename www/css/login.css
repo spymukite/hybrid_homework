@@ -1,0 +1,281 @@
+#loginScreen #btnLogin {
+	background-color: #ff3f00;
+	color: #ffffff;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-size: 1em !important;
+	display: inline-block;
+	border-style: none;
+	width:45% !important;
+	margin-top:40px !important;
+	padding:10px !important;
+	line-height:21px !important;
+	margin-bottom:30px !important;
+}
+
+#loginScreen ::-webkit-input-placeholder {
+	font-family: 'Open Sans';
+	color: #afafaf;
+}
+#loginScreen .logopaddingtop{
+	padding-top: 1%;
+}
+#loginScreen .logopaddingtop img{
+	height: 45% !important;
+    width: 45% !important;
+
+}
+
+#loginScreen #txtUserName {
+	background: url(../images/icons/icon_e-mail.svg);
+	background-size: 60px 60px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left:14%;
+	font-size: 1.2em;
+	border-bottom:1px solid #CCC;
+}
+
+#loginScreen #txtPassword {
+	background: url(../images/icons/icon_password.svg);
+	background-size: 60px 60px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left:14%;
+	font-size: 1.2em;
+	border-bottom:1px solid #CCC;
+}
+
+#loginScreen .ui-input-text {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-color: #d1d3d4;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+#loginScreen #lnkForgotPassword {
+	font-family: 'Open Sans';
+	font-size: 12px;
+	color: #b10102 !important;
+}
+
+#loginScreen .ui-header {
+	border: none;
+}
+
+#loginScreen #spnRemember {
+	background: url(../images/icons/icon_radio_button.svg);
+	background-size: 3.3em 3.3em;
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 12%;
+	margin-left: 3%;
+	font-family: 'Open Sans';
+	color: #afafaf;
+	font-size: 0.8em;
+}
+#positionWindow-popup
+{
+	overflow:hidden;
+	width:80%;
+}
+#logoSvg {
+    height: 25% !important;
+    width: 25% !important;
+
+}
+@media only screen and (min-width: 400px) {
+	#loginScreen #txtUserName {
+	background: url(../images/icons/icon_e-mail.svg);
+	background-size: 60px 60px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left:15%;
+}
+
+#loginScreen #txtPassword {
+	background: url(../images/icons/icon_password.svg);
+	background-size: 60px 60px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left:15%;
+}
+
+#loginScreen .ui-input-text {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-color: #d1d3d4;
+	
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+#loginScreen #spnRemember {
+	background: url(../images/icons/icon_radio_button.svg);
+	background-size: 3.3em 3.3em;
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 10%;
+	margin-left: 3%;
+	font-family: 'Open Sans';
+	color: #afafaf;
+	font-size: 0.8em;
+}
+}
+
+@media only screen and (min-width: 600px) {
+	
+	#loginScreen #txtUserName {
+	background: url(../images/icons/icon_e-mail.svg);
+	background-size: 60px 60px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left:10%;
+}
+
+#loginScreen #txtPassword {
+	background: url(../images/icons/icon_password.svg);
+	background-size: 60px 60px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left:10%;
+}
+
+#loginScreen .ui-input-text {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-color: #d1d3d4;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+#loginScreen #spnRemember {
+	background: url(../images/icons/icon_radio_button.svg);
+	background-size: 3.3em 3.3em;
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 8%;
+	margin-left: 3%;
+	font-family: 'Open Sans';
+	color: #afafaf;
+	font-size: 0.8em;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+	#loginScreen #txtUserName {
+	background: url(../images/icons/icon_e-mail.svg);
+	background-size: 60px 60px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left:6%;
+}
+
+#loginScreen #txtPassword {
+	background: url(../images/icons/icon_password.svg);
+	background-size: 60px 60px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left:6%;
+}
+
+#loginScreen .ui-input-text {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-color: #d1d3d4;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+}
+/*iPhone 3/4*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) { /* STYLES GO HERE */}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : landscape) { 
+#loginScreen .logopaddingtop{
+	padding-top: 0%;
+}
+}
+@media only screen and (max-width: 320px) {
+	#loginScreen #btnLogin {
+	font-size: 0.9em;
+	width:95%;
+}
+#loginScreen .logopaddingtop{
+	padding-top: 0% !important;
+}
+	#loginScreen #txtUserName {
+	background: url(../images/icons/icon_e-mail.svg);
+	background-size: 50px 50px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left:17%;
+	font-size: 1em;
+	
+}
+
+#loginScreen #txtPassword {
+	background-size: 50px 50px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left:17%;
+	font-size: 1em;
+}
+
+#loginScreen .ui-input-text {
+	padding-top: 2%;
+	padding-bottom: 1%;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+#loginScreen #spnRemember {
+	background: url(../images/icons/icon_radio_button.svg);
+	background-size: 3em 3em;
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 12%;
+	margin-left: 3%;
+	font-size: 0.9em;
+}
+
+}
+@media only screen and (min-width: 600px) {
+#loginScreen #btnLogin {
+	font-size: 1.2em;
+	width:95%;
+}
+
+#loginScreen #txtUserName {
+	font-size: 1.2em;
+}
+
+#loginScreen #txtPassword {
+	font-size: 1.2em;
+}
+
+#loginScreen #lnkForgotPassword {
+	font-size: 1em;
+}
+
+#loginScreen #spnRemember {
+	font-size: 1.2em;
+}
+
+}

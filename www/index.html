@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/reset_style.css">
+        <link rel="stylesheet"  href="css/Material.css" >
+        
+        <link rel="stylesheet"  href="css/media_style.css" >
+        <link rel="stylesheet"  href="css/login.css" >
+        
+        <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+        <script src="float/js/jquery.min.js" ></script>
+        <script src="js/jquery-2.1.4.min.js"></script>
+
+        <!--===============Template============================!-->
+        <script type="text/javascript" src="template/Message_Text.js"></script>
+        <script type="text/javascript" src="template/Message_Image.js"></script>
+        <script type="text/javascript" src="template/Dialog_Delete.js"></script>
+        <script type="text/javascript" src="template/Dialog_Edit.js"></script>
+        <script type="text/javascript" src="template/Student_List.js"></script>
+        <script type="text/javascript" src="template/Message_Right.js"></script>
+        <script type="text/javascript" src="template/Message_Left.js"></script>
+
+
+        <script src="js/message_tp.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/attendance.js"></script>
+        <script src="js/student_list.js"></script>
+        <script src="js/slidemenu.js"></script>
+        <script src="js/homework.js"></script>
+        <script src="js/marksheet.js"></script>
+        <script src="js/audiorecord.js"></script>>
+
+        <!--===============board============================!-->
+    
+        <script type="text/javascript" src="board/js/jquery.ui.core.min.js"></script>
+        <script type="text/javascript" src="board/js/jquery.ui.widget.min.js"></script>
+        <script type="text/javascript" src="board/js/jquery.ui.mouse.min.js"></script>
+        <script type="text/javascript" src="board/js/jquery.ui.draggable.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="board/css/wColorPicker.css"/>
+        <script type="text/javascript" src="board/js/wColorPicker.js"></script>
+        <link rel="stylesheet" type="text/css" href="board/css/wPaint.css" />
+        <script type="text/javascript" src="board/js/wPaint.js"></script>
+        <link rel="stylesheet" href="board/css/top.css" type="text/css" >
+
+        <script type="text/javascript" src="template/Append_Attach.js"></script>
+
+        <link rel="stylesheet"  href="css/attachment.css" >
+        <link rel="stylesheet"  href="css/slider.css" >
+
+    </head>
+    <body>
+        <div id="loginScreen" data-role="page">
+            <div data-role="main">
+                <div class="logopaddingtop">
+                    <center>
+                        <img src="images/KN_logo_pic.svg" >
+                    </center>
+                </div>
+                <input id="txtUserName" placeholder="E-mail / Username" value="demo">
+                <input id="txtPassword" placeholder="Password" type="password">
+                <center>
+                    <img src="images/login_bg_pic.svg" id="logoSvg">
+                </center>
+                <span id="spnRemember">Remember me on this device</span> <br /> <br />
+                <center>
+                    <a href="#StudentHomework" ><button id="btnLogin" >STUDENT LOGIN</button></a>
+                    <a href="#Homework"><button id="btnLogin" >TEACHER LOGIN</button></a>
+                    <br/> <a id="lnkForgotPassword">FORGOT PASSWORD</a>
+                </center>
+            </div>
+        </div>
+
+<!-- ============================End Login Page============================================  -->
+        
+    
+<!-- ============================Homework Page============================================  -->
+
+        <div data-role="page" id="Homework" >
+
+            <div data-role="header" data-position="fixed" class="home_header" >
+                <a href="#loginScreen" class="i-btn-left backmenuicon"  data-role="button" data-iconpos="notext">
+                    <i class="fa fa-arrow-left back_bttn"></i>
+                </a>
+                <h2>VI Std</h2>
+                <div class="right_menus2">  
+                    <a href="#stdMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline  ui-btn-a">
+                        <i class="fa fa-th-list tab_icon"></i>
+                    </a>
+                </div>
+                <div data-role="popup" id="stdMenu" data-theme="a" class="tb_menu">
+                    <ul data-role="listview"  >
+                        <li class="list_oder"><a href="#" style="content:none !important;">VI Std Maths</a></li>
+                        <li class="list_oder"><a href="#HomeworkDetails">VII Std Physics</a></li>
+                        <li class="list_oder"><a href="#">VIII Std Chemistry</a></li>
+                        <li class="list_oder"><a href="#">X Std English</a></li>
+                        <li class="list_oder"><a href="#">XII Std Tamil</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div data-role="content" onload="scro()"> 
+                <div class="chat">
+                    <ul id="List_Homework_Teacher" class="sendMessage">
+                        
+                    </ul>
+                    
+                    <div class="sample"></div>
+                    
+                    <div data-role="popup" id="Homework_DeletePopup_Teacher" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;" class="pop_widget">
+                    
+                    </div>
+                    
+                    <div data-role="popup" id="Homework_EditPopup_Teacher" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;" class="pop_widget">
+        
+                    </div>
+                </div>
+            </div>
+       
+            <div class="kc_fab_wrapper" >
+
+            </div>
+
+            <div class="attach_icon">
+                <span>
+                    <div>
+                        <div style="position: fixed; left: 20px; bottom: 65px;">
+                            <label for="attach"> <img src="images/icon_attach.png"></label>
+                            <input style="visibility: hidden; position: absolute;" id="attach" class="form-control" type="file" name="attach">
+                        </div>
+                    </div>
+                </span>
+            </div>
+        
+            <div id="Homework_Send_Tab_Teacher" data-fullscreen="true" data-position="fixed" data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-footer-fullscreen ui-bar-a ui-footer-fixed slideup home_header" style="border:none !important;">
+                <div class="ui-block-a" >
+                    <button  class="mdl-button mdl-js-button mdl-button--icon fileContainer" data-upgraded=",MaterialButton">
+                        <a href="#HomeworkSelectImageScreen" class="i-btn-left"  data-role="button" data-iconpos="notext">
+                            <i class="fa fa-paperclip back_bttn attch_icon"></i>
+                        </a>
+                    </button>
+                </div>
+            
+                <div class="ui-block-b attn_date_title">
+                    <textarea  class="mdl-textfield__input" id="Message_Homework_Teacher" cols="30" rows="5" placeholder="Typetext Here" ></textarea>
+                </div>
+
+                <div class="ui-block-c" i>
+                    <button id="Send_Homework_Teacher" class=" ui-btn ui-shadow ui-corner-all submit_bttn">
+                        <i class="fa fa-paper-plane send_bttn"></i>
+                    </button>
+                </div>
+            </div>
+
+            
+
+            <script>
+                $(document).ready(function() {
+                    loadDeleteDialog("#Homework_DeletePopup_Teacher");
+                    loadEditDialog("#Homework_EditPopup_Teacher");
+                });
+            </script>
+        </div>
+
+<!-- ============================Homework Page End============================================  -->
+
+<!-- ============================Homework Details Page============================================  -->
+
+        <div data-role="page" id="HomeworkDetails" >
+            <div data-role="header" data-position="fixed" class="home_header" >
+                <a href="#Homework" class="i-btn-left backmenuicon"  data-role="button" data-iconpos="notext">
+                    <i class="fa fa-arrow-left back_bttn"></i>
+                </a>
+                <h2>Homework Viewers Details</h2>
+            </div>
+            
+            <div class="smart_tabs">
+                <div data-role="navbar"  data-grid="d">
+                    <ul>
+                        <li class="tabs_sc">
+                            <a href="#home_tab_1" class="ui-btn-active homework_view">
+                                <i class="fa fa-user"></i>
+                                Completed View
+                            </a>
+                        </li>
+                        <li class="tabs_sc">
+                            <a href="#home_tab_2" class="homework_unread_view">
+                                <i class="fa fa-user-times"></i>
+                                Non complete View
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div data-role="content"> 
+                <section id="home_tab_1">
+                    <div class="chat2">
+                        <ul id="list1" data-role="listview" data-filter="true" class="dash_mv " data-inset="true" data-input="#rich-autocomplete-input">
+                            <p class="sub_lst"><strong>Homework completed List</strong></p>
+                        </ul>
+
+                        <ul id="list2" data-role="listview" data-filter="true" class="dash_mv " data-inset="true" data-input="#rich-autocomplete-input">
+                            <p class="sub_lst"><strong>Homework submit List</strong></p>                    
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="home_tab_2" style="display:none;">
+                    <div class="chat2">
+                        <ul id="list3" data-role="listview" data-filter="true" class="dash_mv " data-inset="true" data-input="#rich-autocomplete-input">
+                            <p class="sub_lst"><strong>Unread Students Lists</strong></p>
+                        </ul>
+
+                        <ul id="list4" data-role="listview" data-filter="true" class="dash_mv " data-inset="true" data-input="#rich-autocomplete-input">
+                            <p class="sub_lst"><strong>Unread Homework List</strong></p>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                loadStudentList("#list1");
+                loadStudentList("#list2");
+                loadStudentList("#list3");
+                loadStudentList("#list4");
+                AppendAttachment("id", "1.pdf");
+            });
+        </script>
+
+<!-- ============================Homework Details Page End============================================  -->
+    
+<!-- ============================Student Chart Page============================================  -->
+
+        <div data-role="page" id="Studentchart" >
+            <div data-role="header" data-position="fixed" class="home_header" >
+                <a href="#HomeworkDetails" class="i-btn-left backmenuicon"  data-role="button" data-iconpos="notext">
+                    <i class="fa fa-arrow-left back_bttn"></i>
+                </a>
+                <h2>VI Std</h2>
+            </div>
+            <div data-role="content"> 
+                <div class="chat">
+                    <ul id="List_Message_Teacher" class="sendMessage">
+                          
+                    </ul>
+                    <div data-role="popup" id="Message_DeletePopup_Teacher" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;" class="pop_widget">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div id="Message_Send_Tab_Teacher" data-fullscreen="true" data-position="fixed" data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-footer-fullscreen ui-bar-a ui-footer-fixed slideup home_header" style="border:none !important;">
+                <div class="ui-block-a" >
+                    <button  class="mdl-button mdl-js-button mdl-button--icon fileContainer" data-upgraded=",MaterialButton">
+                        <a href="#HomeworkSelectImageScreen" class="i-btn-left"  data-role="button" data-iconpos="notext">
+                            <i class="fa fa-paperclip back_bttn attch_icon"></i>
+                        </a>
+                    </button>
+                </div>
+                <div class="ui-block-b attn_date_title">
+                    <textarea  class="mdl-textfield__input" id="Message_Teacher" cols="30" rows="5" placeholder="Typetext Here" ></textarea>
+                </div>
+                <div class="ui-block-c" i>
+                    <button id="Send_Message_Teacher" class=" ui-btn ui-shadow ui-corner-all submit_bttn">
+                        <i class="fa fa-paper-plane send_bttn"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                loadDeleteDialog("#Message_DeletePopup_Teacher");
+            });
+        </script>
+
+<!-- ============================Student Chart Page End============================================  -->
+    
+    
+<!-- ============================Board Page============================================  -->
+
+        <div data-role="page" id="Board" >
+            <div data-role="header" data-position="fixed" class="home_header" >
+                <a href="#Homework" class="i-btn-left backmenuicon"  data-role="button" data-iconpos="notext">
+                    <i class="fa fa-arrow-left back_bttn"></i>
+                </a>
+                <h2>Board</h2>
+            </div>
+            <div data-role="content"> 
+                <div class="chat2 marks_bg2">
+                    <div class="wrappe_borad">
+                        <div class="board">      
+                            <div class="mark_cor"  id="wPaint" style="position:relative; height:420px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);padding:0% 5%;" >    
+                            </div>                          
+                            <div class="kt-fab-wrapper">
+                                <a class="kt-fab kt-fab-accent sendPaintedImage" href="javascript:saveImage();" id="saveandclose">
+                                    <i class="fa fa-clone send_bttn"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+            <div id="homeworkSendMessageTab" data-fullscreen="true" data-position="fixed" data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-footer-fullscreen ui-bar-a ui-footer-fixed slideup home_header" style="border:none !important;">
+                <div class="ui-block-a" >
+                    <button  class="mdl-button mdl-js-button mdl-button--icon fileContainer" data-upgraded=",MaterialButton">
+                        <a href="#HomeworkSelectImageScreen" class="i-btn-left"  data-role="button" data-iconpos="notext">
+                            <i class="fa fa-paperclip back_bttn attch_icon"></i>
+                        </a>
+                    </button>
+                </div>
+                <div class="ui-block-b attn_date_title">
+                    <textarea  class="mdl-textfield__input" id="homeworkMessage" cols="30" rows="5" placeholder="Typetext Here" ></textarea>
+                </div>
+                <div class="ui-block-c" i>
+                    <button id="homeworkMessageSend" class=" ui-btn ui-shadow ui-corner-all submit_bttn">
+                        <i class="fa fa-paper-plane send_bttn"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+<!-- ============================Board Page End============================================  -->
+    
+<!-- ============================Homework Selected Photo Page============================================  -->
+
+        <div data-role="page" id="HomeworkSelectImageScreen" class="upload_head">
+            <div data-role="header" data-position="fixed" class="upload_head" >
+                <a href="#Homework" class="i-btn-left backmenuicon"  data-role="button" data-iconpos="notext">
+                    <img src="images/icon_back.svg" style="width:35px;" class="back_bttn">
+                </a>   
+                <h2>Selected Images</h2>
+            </div>
+            <div data-role="content" > 
+                <div class="upload uploaad_img_big" >
+                    <img src="images/3.jpg" class='homeworkImgBig'>
+                </div>
+                <div class="upload">
+                    <textarea class="mdl-textfield__input enterdesc" id="homeworkMessage" cols="30" rows="5" placeholder="Typetext Here" ></textarea>
+                    <!--<input size="15" type="text" height="16" style="line-height:21px;"   cols="10" rows="5" >-->
+                </div>
+                <div class="upload_thumb">
+                    <div id="homeworkUploadImage">
+                    </div>
+                    <span>
+                        <div>
+                            <div style="display:block;text-align:center; float:left; padding-left:20px; padding-top:20px;">
+                                <label for="files"> <img src="images/plus.png"></label>
+                                <input style="visibility: hidden; position: absolute;" id="files" class="form-control" type="file" name="files">
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            
+            <div id="homeworkSelectedImages"></div>
+            <div id="viewSelectedimages"></div> 
+        
+            <div class="footerbtn">
+                <a href="#Homework"><button id="homeworkSendSelectedImage" class="upload_bttn">Send</button><a>
+                <a href="#Homework"><button class="upload_bttn" class="upload_bttn" >Cancel</button></a>
+            </div>
+        </div>
+
+<!-- ============================Homework Selected Photo Page End============================================  -->
+
+
+
+
+<!-- ============================Audio Record Page============================================  -->
+
+        <div data-role="page" id="AudioRecordPage" class="upload_head">
+            <div data-role="header" data-position="fixed" class="upload_head" >
+                <a href="#Homework" class="i-btn-left backmenuicon"  data-role="button" data-iconpos="notext">
+                    <img src="images/icon_back.svg" style="width:35px;" class="back_bttn">
+                </a>   
+                <h2>Record Audio</h2>
+            </div>
+            <div data-role="content">
+                <div id="player" style="margin-top: 100px;">
+                    <div id="media-info">
+                        <form>
+                            <input name="slider" id="slider" min="0" max="1200" value="0" type="range" data-highlight="true">
+                        </form>
+                    </div>
+                    <div id="media-controller" align="center" style="margin-top: 30px;">
+                        <img id="play-button" src="images/play_button.png" style="margin-right: 20px;">
+                        <img id="stop-button" src="images/stop_button.png">
+                    </div>
+                </div>
+            </div>
+            
+            <div id="homeworkSelectedImages"></div>
+            <div id="viewSelectedimages"></div> 
+        
+            <div class="footerbtn">
+                <a href="#Homework"><button id="homeworkSendSelectedAudio" class="upload_bttn">Send</button><a>
+                <a href="#Homework"><button class="upload_bttn" class="upload_bttn" >Cancel</button></a>
+            </div>
+        </div>
+
+<!-- ============================Audio Record Page End============================================  -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--===============Student Homework Page============================!-->
+        <div data-role="page" id="StudentHomework">
+            <div data-role="header" data-position="fixed" class="home_header" >
+                <a href="index.html" class="i-btn-left backmenuicon"  data-role="button" data-iconpos="notext">
+                    <i class="fa fa-arrow-left back_bttn"></i>
+                </a>
+                <h2>VI Std</h2>
+                <div class="right_menus2">
+                </div>
+            </div>
+        
+            <div data-role="content" onload="scro()"> 
+                <div class="chat">              
+                    <ul id="List_Homework_Student" class="sendMessage">
+                        <li id="11" class="message-right"> <!-- right message --> </li>
+                        <li id="12" class="message-right"> <!-- left message --> </li>
+                        <li id="14" class="message-right"> <!-- left message --> </li>
+                    </ul>
+                    <div class="sample"></div>
+                    <div data-role="popup" id="Homework_DeletePopup_Student" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;" class="pop_widget">
+                    </div>
+                </div>
+            </div>
+
+            <div id="Homework_Send_Tab_Student" data-fullscreen="true" data-position="fixed" data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-footer-fullscreen ui-bar-a ui-footer-fixed slideup home_header" style="border:none !important;">
+                <div class="ui-block-a" >
+                    <button  class="mdl-button mdl-js-button mdl-button--icon fileContainer" data-upgraded=",MaterialButton">
+                        <a href="#HomeworkSelectImageScreen" class="i-btn-left"  data-role="button" data-iconpos="notext">
+                            <i class="fa fa-paperclip back_bttn attch_icon"></i>
+                        </a>
+                    </button>
+                </div>
+                <div class="ui-block-b attn_date_title">
+                    <textarea class="mdl-textfield__input" id="Message_Homework_Student" cols="30" rows="5" placeholder="Typetext Here" ></textarea>
+                </div>
+                <div class="ui-block-c" i>
+                    <button id="Send_Homework_Student" class=" ui-btn ui-shadow ui-corner-all submit_bttn">
+                        <i class="fa fa-paper-plane send_bttn"></i>
+                    </button>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function() {
+                    loadDeleteDialog("#Homework_DeletePopup_Student");
+                });
+            </script>
+        </div>
+<!--===============Homework Page End============================!-->
+
+<!--===============Student Chart============================!-->
+        <div data-role="page" id="HomeStudentChat" >
+            <div data-role="header" data-position="fixed" class="home_header" >
+                <a href="#StudentHomework" class="i-btn-left backmenuicon"  data-role="button" data-iconpos="notext">
+                    <i class="fa fa-arrow-left back_bttn"></i>
+                </a>
+                <h2>VI Std</h2>
+            </div>
+            
+            <div data-role="content">
+                <div class="chat">
+                    <ul id="List_Message_Student" class="sendMessage">
+                    </ul>
+                    <div data-role="popup" id="Message_DeletePopup_Student" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;" class="pop_widget">
+                        
+                    </div>
+                </div>
+            </div>
+   
+            <div id="Message_Send_Tab_Student" data-fullscreen="true" data-position="fixed" data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-footer-fullscreen ui-bar-a ui-footer-fixed slideup home_header" style="border:none !important;">
+                <div class="ui-block-a" >
+                    <button  class="mdl-button mdl-js-button mdl-button--icon fileContainer" data-upgraded=",MaterialButton">
+                        <a href="#HomeworkSelectImageScreen" class="i-btn-left"  data-role="button" data-iconpos="notext">
+                            <i class="fa fa-paperclip back_bttn attch_icon"></i>
+                        </a>
+                    </button>
+                </div>
+        
+                <div class="ui-block-b attn_date_title">
+                    <textarea class="mdl-textfield__input" id="Message_Student" cols="30" rows="5" placeholder="Typetext Here" ></textarea>
+                </div>
+                <div class="ui-block-c" i>
+                    <button id="Send_Message_Student" class=" ui-btn ui-shadow ui-corner-all submit_bttn">
+                        <i class="fa fa-paper-plane send_bttn"></i>
+                    </button>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function() {
+                    loadDeleteDialog("#Message_DeletePopup_Student");
+                });
+            </script>
+        </div>
+<!--===============Student Chart End============================!-->
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============================Floating Action Menu============================================  -->
+    
+        <link rel="stylesheet" href="float/css/kc.fab.css">
+        <script src="float/js/kc.fab.min.js"></script>
+        <script type="text/javascript" src="js/togglemenu.js"></script>
+        
+<!-- ============================Floating Action Menu End============================================  -->
+    
+    
+   
+        <script src="js/jquery.cycle.all.js"></script>    
+        <script language="javascript">
+            $(document).ready(function(){
+
+                $('#slider1').cycle({
+                    fx: 'scrollHorz', //'scrollLeft,scrollDown,scrollRight,scrollUp',blindX, blindY, blindZ, cover, curtainX, curtainY, fade, fadeZoom, growX, growY, none, scrollUp,scrollDown,scrollLeft,scrollRight,scrollHorz,scrollVert,shuffle,slideX,slideY,toss,turnUp,turnDown,turnLeft,turnRight,uncover,ipe ,zoom
+                    speed:  'slow', 
+                    timeout: 0,
+                    next:   '#next', 
+                    prev:   '#prev',
+                    pager:  '#thumb',
+                     
+                    pagerAnchorBuilder: function(idx, slide) { 
+                        return '<li><a href="#"><img src="' + slide.src + '" width="60" height="60" /></a></li>'; 
+                    }  
+                });
+
+            }); 
+        </script>
+
+        <link rel="stylesheet" type="text/css" href="css/windy.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+        <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+        <noscript><link rel="stylesheet" type="text/css" href="css/noJS.css" /></noscript>
+        <script type="text/javascript" src="js/jquery.windy.js"></script>
+        <script type="text/javascript" src="js/player.js"></script>
+        <script type="text/javascript"> 
+            $(function() {
+
+                var $el = $( '#wi-el' ),
+                    windy = $el.windy( {
+                        // rotation and translation boundaries for the items transitions
+                        boundaries : {
+                            rotateX : { min : 40 , max : 90 },
+                            rotateY : { min : -15 , max : 45 },
+                            rotateZ : { min : -10 , max : 10 },
+                            translateX : { min : -400 , max : 400 },
+                            translateY : { min : -400 , max : 400 },
+                            translateZ : { min : 350 , max : 550 }
+                        }
+                    } ),
+                    allownavnext = false,
+                    allownavprev = false;
+
+                $( '#nav-prev' ).on( 'mousedown', function( event ) {
+
+                    allownavprev = true;
+                    navprev();
+                
+                } ).on( 'mouseup mouseleave', function( event ) {
+
+                    allownavprev = false;
+                
+                } );
+
+                $( '#nav-next' ).on( 'mousedown', function( event ) {
+
+                    allownavnext = true;
+                    navnext();
+                
+                } ).on( 'mouseup mouseleave', function( event ) {
+
+                    allownavnext = false;
+                
+                } );
+
+                function navnext() {
+                    if( allownavnext ) {
+                        windy.next();
+                        setTimeout( function() {    
+                            navnext();
+                        }, 150 );
+                    }
+                }
+
+                function navprev() {
+                    if( allownavprev ) {
+                        windy.prev();
+                        setTimeout( function() {    
+                            navprev();
+                        }, 150 );
+                    }
+                }
+
+            });
+        </script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

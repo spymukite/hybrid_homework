@@ -1,0 +1,14 @@
+.attach-list {
+	line-height: 40px !important;
+	display: inline-block;
+}
+
+.attach-list img {
+	width: auto !important;
+	height: auto !important;
+}
+
+.attachment {
+	line-height: 40px !important;
+	float: right;
+}

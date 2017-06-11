@@ -1,0 +1,12 @@
+.ui-btn.ui-slider-handle {
+	background-color: #f6f6f6 !important;
+	border-color: #ddd !important;
+	margin: -15px 0 0 -15px !important;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .15) !important;
+	line-height: 30px !important;
+	border-radius: 50%;
+}
+
+.ui-slider .ui-btn-active {
+	background-color: #38c !important;
+}

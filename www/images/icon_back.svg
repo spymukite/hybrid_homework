@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;" xml:space="preserve">
+<symbol  id="back_x5F_button" viewBox="-44.634 -57.791 90 90">
+	<g>
+		<g id="Menu_22_">
+			<polygon style="fill:none;" points="45.366,-57.791 -44.634,-57.791 -44.634,32.209 45.366,32.209 			"/>
+		</g>
+		<g>
+			<g>
+				<g>
+					<path style="fill:#FFFFFF;" d="M14.965,11.696l-27.747-27.747l-2.121,2.121l27.934,27.934c0.012,0.013,0.025,0.025,0.038,0.038
+						l0.023,0.023l0.002-0.002c0.27,0.25,0.628,0.406,1.025,0.406c0.837,0,1.515-0.678,1.515-1.515
+						C15.634,12.43,15.369,11.969,14.965,11.696z"/>
+				</g>
+			</g>
+			<g>
+				<g>
+					<path style="fill:#FFFFFF;" d="M14.965-39.56l-27.747,27.747l-2.121-2.121l27.934-27.934c0.012-0.013,0.025-0.025,0.038-0.038
+						l0.023-0.023l0.002,0.002c0.27-0.25,0.628-0.406,1.025-0.406c0.837,0,1.515,0.678,1.515,1.515
+						C15.634-40.293,15.369-39.832,14.965-39.56z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</symbol>
+<symbol  id="reject" viewBox="-22.5 -22.5 45 45">
+	<polygon style="fill:#B10102;" points="22.5,-22.5 -22.5,-22.5 -22.5,22.5 22.5,22.5 	"/>
+</symbol>
+<symbol  id="reviews_x5F_bg" viewBox="-542.224 -287.727 1084.447 573.106">
+	<polygon style="opacity:0.4;fill:#AFAFAF;" points="511.937,-287.727 -512.063,-287.727 -512.063,-286.727 511.937,-286.727 	"/>
+	<polygon style="fill:#FFFFFF;" points="542.224,-286.727 -542.224,-286.727 -542.224,285.379 542.224,285.379 	"/>
+</symbol>
+<g id="PO_Details_Item_1_">
+</g>
+<use xlink:href="#back_x5F_button"  width="90" height="90" id="XMLID_3_" x="-44.634" y="-57.791" transform="matrix(1 0 0 -1 44.6345 32.2089)" style="overflow:visible;"/>
+<g id="requests_x5F_items">
+</g>
+<g id="pending">
+</g>
+<g id="approve_x5F_button">
+</g>
+<g id="reject_x5F_button">
+</g>
+<g id="navigation">
+	<g id="PO_x5F_reviews_x5F_1">
+	</g>
+</g>
+<g id="PO_Details_Item">
+</g>
+</svg>
